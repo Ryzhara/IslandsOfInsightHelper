@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ioihelper"
+version = "0.1.0"
+dependencies = ["pygvas>=0.9.3"]
+description = "Edits and updates Islands of Insight save game files to make your offline experience more fun."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "CC-BY-NC-SA-4.0"
+authors = [{name = "Robin Eric Fredericksen", email = "refredericksen@gmail.com"}]
+
+# Link to GitHub and elsewhere
+urls = { 
+  "Homepage" = "https://github.com/Ryzhara/IslandsOfInsightHelper",
+  "Source" = "https://github.com/Ryzhara/IslandsOfInsightHelper",
+  "Tracker" = "https://github.com/Ryzhara/IslandsOfInsightHelper/issues",
+  "Steam" = https://store.steampowered.com/app/2071500/Islands_of_Insight/
+}
+
+[tool.setuptools.packages.find]
+where = ["."]
