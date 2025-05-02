@@ -1,22 +1,18 @@
-import argparse
+import datetime
 import os
-import sys
+import shutil
+import time
 import winreg
+from dataclasses import dataclass
 from pathlib import Path
-from turtledemo.clock import setup
 from typing import Optional, Any, Union
 from winreg import HKEYType
-import shutil
-import datetime, time
 
 # JSONPath https://pypi.org/project/jsonpath-ng/
 import jsonpath_ng
 from jsonpath_ng.ext import parse as ext_parse
-
-
-from pygvas import GVASFile, GvasHeader, GameFileFormat
+from pygvas import GVASFile
 from pygvas import gvas_utils
-from dataclasses import dataclass
 
 
 # ==========================================
@@ -55,7 +51,8 @@ class IslandsOfInsightHelper:
         self.steam_user_paths = self.find_steam_local_config_paths()
         if self.be_verbose:
             # print(f"Steam Installation Path: {self.steam_install_path}")
-            print(f"User Paths: {self.steam_user_paths}")
+            # print(f"User Paths: {self.steam_user_paths}")
+            pass
 
         self.source_sav_backup_path = None
         self.gvas_file = None
@@ -203,7 +200,7 @@ class IslandsOfInsightHelper:
     #
 
     @staticmethod
-    def vdf_to_json(vdf_text: str) -> dict[str, Any]:
+    def vdf_to_json(_vdf_text: str) -> dict[str, Any]:
         """
         Dummy VDF to JSON converter.
         Replace this with a real VDF parser if needed.
@@ -278,7 +275,7 @@ class IslandsOfInsightHelper:
             raise FileNotFoundError(f"Not a file: {gvas_filepath}")
 
         self.gvas_file: GVASFile = GVASFile.deserialize_gvas_file(
-            gvas_filepath, deserialization_hints=hints_file
+            str(gvas_filepath), deserialization_hints=hints_file
         )
         # this will be edited in place
         self.json_content = self.gvas_file.serialize_to_json()
