@@ -7,7 +7,7 @@ Prints out some game statistics even if no modifications are requested.
 ```bash
 pip install ioihelper
 
-# installs pygvas and pydantic as requirements
+# installs jsonpath_ng, pygvas and pydantic as requirements
 # Close the game, use this utility as described below, then restart.
 ```
 
