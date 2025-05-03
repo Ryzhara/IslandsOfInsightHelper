@@ -38,7 +38,7 @@ def parse_arguments():
         "--show_completed_visuals",
         type=bool,
         default=None,
-        help="Updates completed quests so that their visuals permanently do or do not show completion. Persists beynod the current play session.",
+        help="Permanently enable/disable visuals cues for puzzle completion. Persists beyond the current play session.",
     )
     parser.add_argument(
         "--save_json",

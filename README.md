@@ -42,8 +42,8 @@ options:
         Sets the Sparks (currency) in your account for purchasing cosmetics. 
         The ones you don't get through mainline and zone progression.
   --show_completed_visuals SHOW_COMPLETED_VISUALS
-        Updates completed quests so that their visuals permanently show 
-        completion, not just for the current play session.
+        Permanently enable/disable visuals cues for puzzle completion.
+        Persists beyond the current play session.
   --save_json
         Save JSON save game files for both before and after modifications. 
         These will land next to the indicated save game source file.
