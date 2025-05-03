@@ -1,6 +1,8 @@
 # Islands of Insight Helper
-Read an Unreal Engine .sav (GVAS) and serialize to a JSON output file. 
-Prints out some game statistics even if no modifications are requested.
+A tool to make your gameplay experience more enjoyable!
+
+Modify an Islands of Insight .sav file as described below. The tool 
+prints out some gameplay statistics even if no modifications are requested. 
 
 ## How To
 
