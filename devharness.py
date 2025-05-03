@@ -42,11 +42,7 @@ This ensures imports work as expected during runs and debugging.
 """
 
 # Add the parent directory to the path so the package can be found
-import sys
-import os
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+import ioihelper
 
-import ioi_helper.ioi_helper_cli as ioihelper_cli
-
-ioihelper_cli.main()
+ioihelper.ioihelper_cli.main()

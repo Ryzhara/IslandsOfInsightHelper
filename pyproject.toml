@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ioihelper"
-version = "0.6.0"
+version = "0.7.2"
 dependencies = ["pygvas>=0.9.3", "jsonpath_ng>=1.7.0"]
 description = "Edits and updates Islands of Insight save game files to make your offline experience more fun."
 readme = "README.md"
@@ -21,7 +21,7 @@ Tracker = "https://github.com/Ryzhara/IslandsOfInsightHelper/issues"
 SteamGame = "https://store.steampowered.com/app/2071500/Islands_of_Insight/"
 
 [project.scripts]
-ioi_helper = "ioihelper.ioihelper_cli:main"
+ioihelper = "ioihelper.ioihelper_cli:main"
 
 [tool.setuptools]
 include-package-data = true

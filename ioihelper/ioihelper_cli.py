@@ -2,7 +2,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from ioi_helper.ioi_helper_core import IslandsOfInsightHelper
+from ioihelper.ioihelper_core import IslandsOfInsightHelper
 
 
 # =========================================
