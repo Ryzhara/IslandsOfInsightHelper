@@ -12,43 +12,43 @@ def parse_arguments():
         description="Modify an Islands of Insight .sav file (OfflineSavegame.sav) as requested. Will prints out some gameplay statistics if no modifications are requested."
     )
     parser.add_argument(
-        "--backup_old_and_use_new",
-        action="store_true",
-        help="Without this flag your edits will not go into effect. This backs up the original file by giving it a timestamp and renames the modified file so it will be loaded by Islands of Insight.",
-    )
-    parser.add_argument(
-        "--input_file",
-        type=str,
-        default=None,
-        help="Path to the Islands of Insight save file. If not present, looks for your save file installation.",
-    )
-    parser.add_argument(
-        "--hints_file",
-        type=str,
-        default=None,
-        help="Path to optional deserialization hints (JSON) file. AFAIK, Islands doesn't need one. See the pygvas documentation for more information.",
-    )
-    parser.add_argument(
-        "--set_sparks_balance",
+        "--set_sparks_balance", "--sb",
         type=int,
         default=None,  # 10_000_000,
         help="Sets the Sparks (currency) in your account for purchasing cosmetics. The ones you don't get through mainline and zone progression.",
     )
     parser.add_argument(
-        "--show_completed_visuals",
+        "--show_completed_visuals", "--sv",
         type=bool,
         default=None,
         help="Permanently enable/disable visuals cues for puzzle completion. Persists beyond the current play session.",
     )
     parser.add_argument(
-        "--save_json",
-        action="store_true",
-        help="Save JSON save game files for both before and after modifications. These will land next to the indicated save game source file.",
-    )
-    parser.add_argument(
         "--complete_all_dailies",
         action="store_true",
         help="Mark ALL dailies completed. This will grant all the progression cosmetics, but the game will be less fun to play. It does NOT affect the meta puzzles or enclaves.",
+    )
+    parser.add_argument(
+        "--backup_old_and_use_new", "--bk",
+        action="store_true",
+        help="Without this flag your edits will not go into effect. This backs up the original file by giving it a timestamp and renames the modified file so it will be loaded by Islands of Insight.",
+    )
+    parser.add_argument(
+        "--input_file", "--if",
+        type=str,
+        default=None,
+        help="Path to the Islands of Insight save file. If not present, looks for your save file installation.",
+    )
+    parser.add_argument(
+        "--hints_file", "--hf",
+        type=str,
+        default=None,
+        help="Path to optional deserialization hints (JSON) file. AFAIK, Islands doesn't need one. See the pygvas documentation for more information.",
+    )
+    parser.add_argument(
+        "--save_json", "--sj",
+        action="store_true",
+        help="Save JSON save game files for both before and after modifications. These will land next to the indicated save game source file.",
     )
 
     return parser.parse_args()

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ioihelper"
-version = "0.7.2"
+version = "0.7.3"
 dependencies = ["pygvas>=0.9.3", "jsonpath_ng>=1.7.0"]
 description = "Edits and updates Islands of Insight save game files to make your offline experience more fun."
 readme = "README.md"

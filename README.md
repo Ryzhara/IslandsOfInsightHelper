@@ -16,13 +16,13 @@ pip install ioihelper
 ```commandline
 > ioihelper -h
 usage: ioihelper [-h] 
-        [--backup_old_and_use_new] 
-        [--input_file INPUT_FILE] 
-        [--hints_file HINTS_FILE] 
-        [--set_sparks_balance SET_SPARKS_BALANCE]
-        [--show_completed_visuals SHOW_COMPLETED_VISUALS] 
-        [--save_json] 
+        [--sb, --set_sparks_balance SET_SPARKS_BALANCE]
+        [--sv, --show_completed_visuals SHOW_COMPLETED_VISUALS] 
         [--complete_all_dailies]
+        [--bk, --backup_old_and_use_new] 
+        [--if, --input_file INPUT_FILE] 
+        [--hf, --hints_file HINTS_FILE] 
+        [--sj, --save_json] 
 
 Modify an Islands of Insight .sav file (OfflineSavegame.sav) as requested. Will 
 prints out some gameplay statistics if no modifications are requested.
@@ -30,29 +30,29 @@ prints out some gameplay statistics if no modifications are requested.
 options:
   -h, --help            
         Show this help message and exit
-  --backup_old_and_use_new
-        Without this flag your edits will not go into effect. This backs up the 
-        original file by giving it a timestamp and renames the modified file so 
-        it will be loaded by Islands of Insight.
-  --input_file INPUT_FILE
-        Path to the Islands of Insight save file. If not present, looks for 
-        your save file installation.
-  --hints_file HINTS_FILE
-        Path to optional deserialization hints (JSON) file. AFAIK, Islands 
-        doesn't need one. See the pygvas documentation for more information.
-  --set_sparks_balance SET_SPARKS_BALANCE
+  --set_sparks_balance, --sb SET_SPARKS_BALANCE
         Sets the Sparks (currency) in your account for purchasing cosmetics. 
         The ones you don't get through mainline and zone progression.
-  --show_completed_visuals SHOW_COMPLETED_VISUALS
+  --show_completed_visuals, --sv SHOW_COMPLETED_VISUALS
         Permanently enable/disable visuals cues for puzzle completion.
         Persists beyond the current play session.
-  --save_json
-        Save JSON save game files for both before and after modifications. 
-        These will land next to the indicated save game source file.
   --complete_all_dailies
         Mark ALL dailies completed. This will grant all the progression 
         cosmetics, but the game will be less fun to play. It does NOT affect
         the meta puzzles or enclaves.
+  --backup_old_and_use_new, --bk
+        Without this flag your edits will not go into effect. This backs up the 
+        original file by giving it a timestamp and renames the modified file so 
+        it will be loaded by Islands of Insight.
+  --input_file, --if INPUT_FILE
+        Path to the Islands of Insight save file. If not present, looks for 
+        your save file installation.
+  --hints_file, --hf HINTS_FILE
+        Path to optional deserialization hints (JSON) file. AFAIK, Islands 
+        doesn't need one. See the pygvas documentation for more information.
+  --save_json, --sj
+        Save JSON save game files for both before and after modifications. 
+        These will land next to the indicated save game source file.
 ```
 
 ## Dependencies
